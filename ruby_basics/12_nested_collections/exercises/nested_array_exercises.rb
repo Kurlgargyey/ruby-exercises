@@ -62,6 +62,7 @@ def find_favorite(array_of_hash_objects)
     if hash[:is_my_favorite?] == true
       return hash
     end
+  end
   return nil
   # TIP: there will only be a maximum of one hash in the array that will
   # return true to the :is_my_favorite? key
