@@ -59,7 +59,7 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    xit 'adds a hash about java with the included kv pairs' do
+    it 'adds a hash about java with the included kv pairs' do
       key_to_add = :java
       value_to_add = { is_beautiful?: false, initial_release: 'May 23, 1995' }
       expected_output = {
@@ -70,7 +70,7 @@ RSpec.describe 'Nested hash exercises' do
       expect(add_language(hash, key_to_add, value_to_add)).to eq(expected_output)
     end
 
-    xit 'adds a hash about python with the included kv pairs' do
+    it 'adds a hash about python with the included kv pairs' do
       key_to_add = :python
       value_to_add = { is_beautiful?: false, initial_release: 'Feb 20, 1991' }
       expected_output = {
@@ -90,7 +90,7 @@ RSpec.describe 'Nested hash exercises' do
       }
     end
 
-    xit 'removes the is_beautiful? k/v pair from the ruby nested hash' do
+    it 'removes the is_beautiful? k/v pair from the ruby nested hash' do
       expected_output = {
         ruby: { initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false, initial_release: 'December 4, 1995' }
@@ -98,7 +98,7 @@ RSpec.describe 'Nested hash exercises' do
       expect(delete_information_about_language(hash, :ruby, :is_beautiful?)).to eq(expected_output)
     end
 
-    xit 'removes the initial_release k/v pair from the javascript nested hash' do
+    it 'removes the initial_release k/v pair from the javascript nested hash' do
       expected_output = {
         ruby: { is_beautiful?: true, initial_release: 'December 25, 1996' },
         javascript: { is_beautiful?: false }

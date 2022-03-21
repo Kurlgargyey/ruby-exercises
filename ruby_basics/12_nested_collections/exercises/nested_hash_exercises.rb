@@ -21,16 +21,21 @@ end
 def add_language(languages, language_name, language_info_value)
   # Take languages and add the key/value pair language_name/language_info_value
   # to it, then return languages
+  languages[language_name]=language_info_value
+  languages
 end
 
 def delete_information_about_language(languages, language_name, info_key)
   # Take languages and delete the key/value pair with key info_key from
   # language_name, then return languages
+  languages[language_name].delete(info_key)
+  languages
 end
 
 def delete_language(languages, language_name)
   # Take languages and delete the language_name key/value pair, then return
   # languages
+  
 end
 
 def find_beautiful_languages(languages)
