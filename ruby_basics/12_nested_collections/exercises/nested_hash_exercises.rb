@@ -52,7 +52,7 @@ def find_beautiful_languages(languages)
   #end
 
   # More concise solution:
-  
+
   languages.select{|language_name, language_info| language_info[:is_beautiful?] == true}
 end
 
@@ -72,4 +72,6 @@ def find_language_facts(languages, language_name, fact_index = 0)
   #                 initial_release: 'December 4, 1995',
   #                 is_beautiful?: false }
   # }
+
+  languages[language_name][:facts][fact_index]
 end
