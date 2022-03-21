@@ -1,3 +1,5 @@
+require pry.byebug
+
 def find_language_information(languages, language_name)
   # Take languages (a nested hash) and language_name as a symbol, return the
   # value for the language_name key (which will be another hash!)
@@ -45,6 +47,7 @@ def find_beautiful_languages(languages)
   languages.reduce (Hash.new) do |beautiful_languages, (language_name, language_info)|
     if language_info[:is_beautiful?] == true
       beautiful_languages[language_name] = language_info
+      binding.pry
     end
   end
 end
